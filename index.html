@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<h1>Welcome to our Page</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
 </head>
-<p>first</p>
+<body>
+    <h1>Welcome to Our Page</h1>
+    
+    <form>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-  <label for="Email">HTML</label><br>
-<input type="text" >
-   <label for="Name">Name</label><br>
-<input type="text" >
-  
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
 </html>
