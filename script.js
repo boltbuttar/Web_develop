@@ -24,9 +24,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // If validation passes, display a success message
-        alert(`Thank you, ${name}! Your form has been successfully submitted.`);
-        
+        alert(`Thank you, ${name}!`);
+
+        // Show an image on the page
+        const imageContainer = document.createElement("div");
+        imageContainer.style.textAlign = "center";
+        const image = document.createElement("img");
+        image.src = "success.png"; // Replace with the path to your image file
+        image.alt = "Success Image";
+        image.style.width = "200px";
+        image.style.marginTop = "20px";
+
+        // Append the image to the form's parent
+        form.parentNode.appendChild(image);
+
         // Optionally, clear the form
         form.reset();
+
+        // Disable the form after submission
+        form.style.display = "none";
     });
 });
