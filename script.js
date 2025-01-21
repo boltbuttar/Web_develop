@@ -26,22 +26,32 @@ document.addEventListener("DOMContentLoaded", () => {
         // If validation passes, display a success message
         alert(`Thank you, ${name}!`);
 
-        // Show an image on the page
+        // Show a full-screen image
         const imageContainer = document.createElement("div");
-        imageContainer.style.textAlign = "center";
+        imageContainer.style.position = "fixed";
+        imageContainer.style.top = "0";
+        imageContainer.style.left = "0";
+        imageContainer.style.width = "100%";
+        imageContainer.style.height = "100%";
+        imageContainer.style.backgroundColor = "black"; // Optional: add a background color
+        imageContainer.style.display = "flex";
+        imageContainer.style.alignItems = "center";
+        imageContainer.style.justifyContent = "center";
+        imageContainer.style.zIndex = "1000";
+
         const image = document.createElement("img");
         image.src = "success.jpg"; // Replace with the path to your image file
         image.alt = "Success Image";
-        image.style.width = "200px";
-        image.style.marginTop = "20px";
+        image.style.maxWidth = "100%";
+        image.style.maxHeight = "100%";
 
-        // Append the image to the form's parent
-        form.parentNode.appendChild(image);
+        // Append the image to the container
+        imageContainer.appendChild(image);
 
-        // Optionally, clear the form
-        form.reset();
+        // Append the container to the body
+        document.body.appendChild(imageContainer);
 
-        // Disable the form after submission
+        // Hide the form
         form.style.display = "none";
     });
 });
